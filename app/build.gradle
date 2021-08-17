@@ -41,6 +41,12 @@ dependencies {
     implementation libs.retrofit
 }
 
+catalog {
+    // declare the aliases, bundles and versions in this block
+    versionCatalog {
+        from files('../libs.versions.toml')
+    }
+}
 
 publishing {
     publications {
