@@ -1,6 +1,7 @@
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
+        mavenLocal()
         google()
         mavenCentral()
         jcenter() // Warning: this repository is going to shut down soon
@@ -8,3 +9,11 @@ dependencyResolutionManagement {
 }
 rootProject.name = "GradleCatalog"
 include ':app'
+enableFeaturePreview('VERSION_CATALOGS')
+dependencyResolutionManagement {
+    versionCatalogs {
+        libs {
+            from("com.zj.catalog:catalog:1.0.0")
+        }
+    }
+}
