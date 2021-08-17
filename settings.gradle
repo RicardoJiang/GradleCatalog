@@ -12,6 +12,8 @@ enableFeaturePreview('VERSION_CATALOGS')
 dependencyResolutionManagement {
     versionCatalogs {
         libs {
+            version('compilesdk', '30')
+            version('targetsdk', '30')
             alias('retrofit').to('com.squareup.retrofit2:retrofit:2.9.0')
             alias('groovy-core').to('org.codehaus.groovy:groovy:3.0.5')
             alias('groovy-json').to('org.codehaus.groovy:groovy-json:3.0.5')

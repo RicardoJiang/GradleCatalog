@@ -4,12 +4,12 @@ plugins {
 }
 
 android {
-    compileSdk 30
+    compileSdk libs.versions.compilesdk.get().toInteger()
 
     defaultConfig {
         applicationId "com.zj.gradlecatalog"
         minSdk 21
-        targetSdk 30
+        targetSdk libs.versions.targetsdk.get().toInteger()
         versionCode 1
         versionName "1.0"
 
