@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'version-catalog'
+    id 'maven-publish'
 }
 
 android {
@@ -37,4 +39,16 @@ dependencies {
     implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
     implementation libs.retrofit
+}
+
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'com.zj.catalog'
+            artifactId = 'catalog'
+            version = '1.0.0'
+            from components.versionCatalog
+        }
+    }
 }
