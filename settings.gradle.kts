@@ -7,11 +7,11 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "GradleCatalog"
-include ':app'
-enableFeaturePreview('VERSION_CATALOGS')
+include(":app")
+enableFeaturePreview("VERSION_CATALOGS")
 dependencyResolutionManagement {
     versionCatalogs {
-        libs {
+        create("libs")  {
             from(files("libs.versions.toml"))
         }
     }
